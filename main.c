@@ -68,42 +68,7 @@ int main(void){
     free(node);
 
 
-    // final integration task
-    printf("\n--- Running Final Integration Task Execution ---\n");
-
-    // 1. Array summation demonstration
-    const int integration_numbers[] = {10, 20, 30, 40, 50};
-    size_t integration_length = sizeof(integration_numbers) / sizeof(integration_numbers[0]);
-    int integration_sum = sum_array(integration_numbers, integration_length);
-    printf("Integration Array Sum: %d\n", integration_sum);
-
-    // 2. Struct and pointer modification verification
-    Record integration_item = {.id = 101, .value = 45.75};
-    Record *integration_ptr = &integration_item;
-    integration_ptr->value = 99.99;
-    printf("Integration Record Modified: ID=%d, Value=%.2f\n", integration_item.id, integration_item.value);
-
-    // 3. Dynamic Record lifecycle check
-    Record *integration_dynamic_record = malloc(sizeof *integration_dynamic_record);
-    if (integration_dynamic_record == nullptr) {
-        fputs("Integration allocation failed\n", stderr);
-        return EXIT_FAILURE;
-    }
-    integration_dynamic_record->id = 1;
-    integration_dynamic_record->value = 42.5;
-    printf("Integration Dynamic Record: id=%d value=%.1f\n", integration_dynamic_record->id, integration_dynamic_record->value);
-    free(integration_dynamic_record);
-
-    // 4. Dynamic Node lifecycle check
-    Node *integration_node = malloc(sizeof *integration_node);
-    if (integration_node == nullptr) {
-        fputs("Integration node allocation failed\n", stderr);
-        return EXIT_FAILURE;
-    }
-    integration_node->value = 100;
-    integration_node->next = nullptr;
-    printf("Integration Node Allocation: value=%d\n", integration_node->value);
-    free(integration_node);
+   
 
     return EXIT_SUCCESS;
 }
